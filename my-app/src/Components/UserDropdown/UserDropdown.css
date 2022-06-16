@@ -1,0 +1,34 @@
+.user-dropdown-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px
+}
+
+.image {
+  display: block;
+  min-width: 48px;
+  width: 48px;
+  max-width: 48px;
+  min-height: 48px;
+  height: 48px;
+  max-height: 48px;
+  background-color: #ddd;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user-dropdown-content-container {
+  position: absolute;
+  display: none;
+  margin-top: 5px;
+  width: 250px;
+  height: 350px;
+  transform: translateX(-170px);
+  border-radius: 10px;
+  background-color: #A62639;
+}
+
+.active {
+  display: block;
+}

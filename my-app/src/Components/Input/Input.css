@@ -1,0 +1,35 @@
+.input-container {
+  width: 100%;
+}
+
+.input-field {
+  background: none;
+  border: none;
+  border-bottom: solid 2px rgb(46, 46, 46);
+  color: rgb(46, 46, 46);
+  font-size: 1.000em;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin: 0em 0 1.875em 0;
+  padding: 0.5em 0 0.5em 1px;
+  width: inherit;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  font: inherit;
+  line-height: normal;
+  margin: 0;
+}
+
+.input-field:focus{
+  outline: none;
+}
+
+.horizontal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75em;
+}

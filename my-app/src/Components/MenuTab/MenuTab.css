@@ -1,0 +1,32 @@
+.menu-tab-container {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  background-color: #DB324D;
+}
+
+.menu-tab-inner-container {
+  position: absolute;
+  height: 50px;
+  width: 90%;
+  background-color: #FBFBF2;
+  border-radius: 0  50px 50px 0;
+}
+
+.menu-tab-label {
+  display: flex;
+  align-items: center;
+  margin-left: 25%;
+  margin-top: -2px;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.active {
+  background-color: #FBFBF2;
+}
+
+.menu-tab-icon {
+  margin-right: 10px;
+}
