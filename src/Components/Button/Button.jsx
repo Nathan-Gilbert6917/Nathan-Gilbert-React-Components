@@ -1,10 +1,17 @@
-import React from 'react';
-import './Button.css';
+import React from "react";
+import "./Button.css";
 
-const Button = ({label, icon, isCircular, isInverted, showShadow, disabled, handleClick}) => {
-    
+const Button = ({
+  label,
+  icon,
+  isCircular,
+  isInverted,
+  showShadow,
+  disabled,
+  handleClick,
+}) => {
   let buttonClass = isCircular ? "button circular" : "button";
-
+  let buttonIconClass = icon ? "button-icon" : "";
   if (isInverted) {
     buttonClass += " invert";
   }
@@ -15,10 +22,10 @@ const Button = ({label, icon, isCircular, isInverted, showShadow, disabled, hand
 
   return (
     <button onClick={handleClick} className={buttonClass} disabled={disabled}>
-      <span className="button-icon">{icon}</span>
+      <span className={buttonIconClass}>{icon}</span>
       <span className="button-label">{label}</span>
     </button>
-  )
-}
+  );
+};
 
 export default Button;
