@@ -29,7 +29,8 @@
   transition: .5s;
 }
 
-.text-input-box .text-input-inner .input-field:focus ~ .input-label {
+.text-input-box .text-input-inner .input-field:focus ~ .input-label,
+.text-input-box .text-input-inner .input-field:valid ~ .input-label {
   top: -20px;
   left: 0;
   color: #000000;
