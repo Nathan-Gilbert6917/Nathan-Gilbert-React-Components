@@ -4,7 +4,7 @@ import "./Input.css";
 import { faEyeSlash, faEye } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const Input = ({ label = "", type = "text", value, name, show = true }) => {
+const Input = ({ label = "", type = "text", value, name, show = false }) => {
   const isText = type === "text";
   const [showPassword, setShowPassword] = useState(show);
   let inputType = showPassword ? "text" : "password";
