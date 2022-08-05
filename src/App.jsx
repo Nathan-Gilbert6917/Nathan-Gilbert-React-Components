@@ -9,7 +9,6 @@ import TextArea from "./Components/TextArea/TextArea";
 import MenuTab from "./Components/MenuTab/MenuTab";
 import SearchBar from "./Components/SearchBar/SearchBar";
 import SelectBar from "./Components/SelectBar/SelectBar";
-import CustomCalendar from "./Components/CustomCalendar/CustomCalendar";
 import TabSet from "./Components/TabSet/TabSet";
 import List from "./Components/List/List";
 import Modal from "./Components/Modal/Modal";
@@ -60,9 +59,6 @@ function App() {
     { value: "4", text: "Option 4" },
     { value: "5", text: "Option 5" },
   ];
-
-  // Calender State
-  const [date, setDate] = useState(new Date());
 
   // TabSet
   const activeTab = "Gator";
@@ -311,16 +307,6 @@ function App() {
           </List>
         </Accordion>
       </div>
-
-      {/* Calender 
-      <div className="large-container">
-      <h3>Calender Us</h3>
-        <CustomCalendar date={date} handleOnChange={setDate} />
-        <p className="text-center">
-          <span className="center">Selected Date:</span> {date.toDateString()}
-        </p>
-      </div>
-      */}
 
       {/* TabSet */}
       <div className="large-container">
