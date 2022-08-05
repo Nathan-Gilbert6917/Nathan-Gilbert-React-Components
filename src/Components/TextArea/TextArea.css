@@ -1,22 +1,26 @@
 .textarea-container {
+  box-sizing: border-box;
   width: 100%;
 }
 
-.textarea-field {
+.textarea-container .textarea-inner {
+  position: relative;
+}
+
+.textarea-container .textarea-inner .textarea-field {
+  outline: none;
   background: none;
   border: none;
   border-bottom: solid 2px rgb(46, 46, 46);
-  font-size: 1em;
+  font-size: 1.2em;
   font-weight: 400;
   letter-spacing: 1px;
   margin: 0em 0 1.875em 0;
-  padding: 0.5em 0 0.5em 1px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  font: inherit;
   line-height: normal;
   resize: none;
   overflow: auto;
@@ -24,6 +28,28 @@
   width: 100%;
 }
 
-.textarea-field:focus{
-  outline: none;
+.textarea-container .textarea-inner .textarea-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: -30px 0;
+  font-size: 1.5em;
+  color: var(--primary-color);
+  pointer-events: none;
+  transition: .5s;
+}
+
+.textarea-container .textarea-inner .textarea-field:focus ~.textarea-label,
+.textarea-container .textarea-inner .textarea-field:valid ~.textarea-label {
+  top: -30px;
+  left: 0;
+  padding: 10px 0;
+  color: var(--primary-color);
+  font-size: 1em;
+  background: transparent;
+}
+
+.textarea-container .textarea-inner .textarea-field:-webkit-autofill,
+.textarea-container .textarea-inner .textarea-field:-webkit-autofill:focus {
+  transition: background-color 600000s 0s, color 600000s 0s;
 }
