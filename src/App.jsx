@@ -16,6 +16,7 @@ import ProgressBar from "./Components/ProgressBar/ProgressBar";
 import UserDropdown from "./Components/UserDropdown/UserDropdown";
 import Accordion from "./Components/Accordion/Accordion";
 import Checkbox from "./Components/Checkbox/Checkbox";
+import MyTable from "./Components/MyTable/MyTable";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
@@ -115,6 +116,28 @@ function App() {
   const handleAccordionClick = () => {
     setAcccordionActive(!acccordionActive);
   };
+
+  // Table Data
+  const headers = ["Header 1", "Header 2", "Header 3"];
+
+  const data = [
+    {
+      id: "1",
+      items: ["Numbered 1", "Numbered 2", "Numbered 3"],
+    },
+    {
+      id: "2",
+      items: ["Numbered 4", "5", "Numbered 6"],
+    },
+    {
+      id: "3",
+      items: ["Numbered 7", "Numbered 8", "Numbered 9"],
+    },
+    {
+      id: "4",
+      items: ["Numbered 10", "", "Numbered 12"],
+    },
+  ];
 
   return (
     <div className="App">
@@ -346,6 +369,11 @@ function App() {
             handleOnChange={(e) => changeNumberOfSteps(e)}
           />
         </div>
+      </div>
+
+      {/* Table */}
+      <div className="large-container">
+        <MyTable headers={headers} data={data} headerClass="table-header" />
       </div>
     </div>
   );

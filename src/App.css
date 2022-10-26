@@ -59,3 +59,8 @@
     grid-template-columns: repeat(1, 1fr);
   }
 }
+
+.table-header {
+  background-color: rgb(186, 186, 186);
+  font-weight: bold;
+}
