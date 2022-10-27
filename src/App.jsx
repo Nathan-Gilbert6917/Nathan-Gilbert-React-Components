@@ -373,6 +373,53 @@ function App() {
 
       {/* Table */}
       <div className="large-container">
+        <h3>Default Table</h3>
+        <MyTable headers={headers} data={data} />
+      </div>
+
+      {/* Table */}
+      <div className="large-container">
+        <h3>
+          Rounded Table with custom header class and header lines but no body
+          lines
+        </h3>
+        <MyTable
+          headers={headers}
+          data={data}
+          headerClass="table-header"
+          isRounded
+          noVerticalLines
+          noHorizontalLines
+        />
+      </div>
+
+      {/* Table */}
+      <div className="large-container">
+        <h3>Rounded Table with no header lines and horizontal body lines</h3>
+        <MyTable
+          headers={headers}
+          data={data}
+          headerClass="table-header"
+          noHorizontalLines
+          noHeaderLines
+        />
+      </div>
+
+      {/* Table */}
+      <div className="large-container">
+        <h3>Rounded Table with header lines and vertical body lines</h3>
+        <MyTable
+          headers={headers}
+          data={data}
+          headerClass="table-header"
+          isRounded
+          noVerticalLines
+        />
+      </div>
+
+      {/* Table */}
+      <div className="large-container">
+        <h3>Table with header lines and horizontal & vertical body lines</h3>
         <MyTable headers={headers} data={data} headerClass="table-header" />
       </div>
     </div>
