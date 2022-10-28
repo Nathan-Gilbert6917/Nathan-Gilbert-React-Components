@@ -9,12 +9,12 @@
 }
 
 /* border lines between cells vertical */
-table .tbody-vertical-lines  tr td {
+table .tbody-horizontal-lines  tr td {
   border-bottom: 2px solid var(--table-border);
 }
 
 /* border lines between cells horizontal */
-table .tbody-horizontal-lines tr td {
+table .tbody-vertical-lines tr td {
   border-left: 2px solid var(--table-border);
 }
 

@@ -9,10 +9,11 @@ const MyTable = ({
   customClass,
   headerClass,
   bodyClass,
+  cellClass,
   isRounded,
-  noHorizontalLines,
-  noVerticalLines,
-  noHeaderLines,
+  horizontalLines,
+  verticalLines,
+  headerLines,
 }) => {
   customClass = customClass
     ? customClass
@@ -20,15 +21,15 @@ const MyTable = ({
     ? "rounded-table"
     : "boxy-table";
 
-  const headerLineClass = noHeaderLines ? "" : "header-inner-lines";
+  const headerLineClass = headerLines ? "header-inner-lines" : "";
 
   const bodyLineClass = () => {
-    if (!noHorizontalLines & !noVerticalLines)
+    if (horizontalLines & verticalLines)
       return "tbody-vertical-lines tbody-horizontal-lines";
 
-    if (noHorizontalLines & !noVerticalLines) return "tbody-vertical-lines";
+    if (verticalLines) return "tbody-vertical-lines";
 
-    if (!noHorizontalLines & noVerticalLines) return "tbody-horizontal-lines";
+    if (horizontalLines) return "tbody-horizontal-lines";
   };
 
   return (
@@ -43,6 +44,7 @@ const MyTable = ({
               key={item.id}
               data={item.items}
               customClass={bodyClass}
+              customCellClass={cellClass}
             />
           );
         })}

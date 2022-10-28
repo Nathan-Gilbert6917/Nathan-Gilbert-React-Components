@@ -388,8 +388,7 @@ function App() {
           data={data}
           headerClass="table-header"
           isRounded
-          noVerticalLines
-          noHorizontalLines
+          headerLines
         />
       </div>
 
@@ -400,8 +399,7 @@ function App() {
           headers={headers}
           data={data}
           headerClass="table-header"
-          noHorizontalLines
-          noHeaderLines
+          horizontalLines
         />
       </div>
 
@@ -413,14 +411,22 @@ function App() {
           data={data}
           headerClass="table-header"
           isRounded
-          noVerticalLines
+          verticalLines
+          headerLines
         />
       </div>
 
       {/* Table */}
       <div className="large-container">
         <h3>Table with header lines and horizontal & vertical body lines</h3>
-        <MyTable headers={headers} data={data} headerClass="table-header" />
+        <MyTable
+          headers={headers}
+          data={data}
+          headerClass="table-header"
+          headerLines
+          verticalLines
+          horizontalLines
+        />
       </div>
     </div>
   );
